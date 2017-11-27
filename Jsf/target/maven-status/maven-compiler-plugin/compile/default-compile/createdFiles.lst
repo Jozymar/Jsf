@@ -1,0 +1,16 @@
+com/ifpb/conexao/Conexao.class
+com/ifpb/jdbc/AlbunsEmJDBC.class
+com/ifpb/integrante/CPF.class
+com/ifpb/convert/ConvertLocalDate.class
+com/ifpb/integrante/Integrante.class
+com/ifpb/integrante/Integrantes.class
+com/ifpb/memoria/AlbunsEmMemoria.class
+com/ifpb/integrante/ServiceIntegrante.class
+com/ifpb/album/Albuns.class
+com/ifpb/convert/ConvertCPF.class
+com/ifpb/web/ControlaAlbum.class
+com/ifpb/album/ServiceAlbum.class
+com/ifpb/web/ControlaIntegrante.class
+com/ifpb/web/ControlaLogin.class
+com/ifpb/album/Album.class
+com/ifpb/memoria/IntegrantesEmMemoria.class

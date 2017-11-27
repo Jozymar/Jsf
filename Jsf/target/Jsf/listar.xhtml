@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Listagem dos Albuns</title>
+    </h:head>
+    <h:body>
+        <h:outputText value="Bem vindo, #{controlaLogin.login}" />
+        <h:form>
+            <h:dataTable value="#{controlaAlbum.albuns()}" var="album">
+                <h:column>
+                    <f:facet name="header">Id</f:facet>
+                        #{album.id}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Descrição</f:facet>
+                        #{album.descricao}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Data de Lançamento</f:facet>
+                    <h:outputText converter="convert.LocalDate" value="#{album.dataDeLancamento}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Ação</f:facet>
+                    <h:commandButton value="excluir" action="#{controlaAlbum.excluir(album)}"/>
+                </h:column>
+            </h:dataTable>
+            <h:dataTable value="#{controlaIntegrante.integrantes()}" var="integrante">
+                <h:column>
+                    <f:facet name="header">Nome</f:facet>
+                    <h:outputText value="#{integrante.nome}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">CPF</f:facet>
+                    <h:outputText converter="convert.CPF" value="#{integrante.cpf}" />
+                </h:column>
+                 <h:column>
+                    <f:facet name="header">Ação</f:facet>
+                    <h:commandButton value="excluir" action="#{controlaIntegrante.excluir(integrante)}"/>
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </h:body>
+</html>
+
